@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://brk0gcculnra7"]
+
+[ext_resource type="Script" path="res://planet/generator/blob_generator.gd" id="1_5vvr4"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_0o7bm"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_cueop"]
+noise = SubResource("FastNoiseLite_0o7bm")
+
+[node name="BlobGenerator" type="Node2D"]
+script = ExtResource("1_5vvr4")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(252, 275)
+
+[node name="Noise" type="Sprite2D" parent="."]
+position = Vector2(873, 319)
+texture = SubResource("NoiseTexture2D_cueop")
